@@ -1,0 +1,469 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, h1, h2, h3, p, ul, li, a {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Header styles */
+.header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    display: inline-block;
+}
+
+.header-title {
+    margin-bottom: 10px;
+}
+
+.header-button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #005f73;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header-button:hover {
+    background-color: #0a9396;
+}
+
+.header-output {
+    margin-top: 10px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #333; /* Example background color for navbar */
+    color: #fff; /* Example text color */
+}
+
+.bitcoin-price {
+    font-size: 1rem; /* Example font size */
+    padding: 10px; /* Example padding */
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex; /* This will place all items in a row */
+    justify-content: center; /* Center items in the nav */
+    align-items: center; /* Vertically align items in the nav */
+    padding: 10px;
+    margin: 0;
+}
+
+.nav-link, .drop-button {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: flex; /* Align text within the link/button */
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+/* Make sure the button has no additional padding or borders */
+.drop-button {
+    background-color: #333; /* Match the navbar background */
+    border: none;
+    cursor: pointer;
+    display: inline-block; /* Aligns the button as an inline element */
+    margin: 0; /* Ensure there is no margin collapsing with other elements */
+    vertical-align: middle; /* Aligns the button vertically */
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative; /* Needed for absolute positioning of dropdown-content */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown content */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Dropdown links are full-width */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+}
+
+.image-section, .education-section, .courses-section, .useful-course-section, .awards-section, .activities-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    margin-bottom: 5px;
+}
+
+.responsive-image {
+    width: 200px; /* Initial width, matches the JavaScript condition */
+    height: auto; /* Maintain aspect ratio */
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.image-caption {
+    text-align: left;
+    margin-top: 5px;
+}
+
+.partnerships {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.partner-link {
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.partner-link:hover {
+    transform: scale(1.1); /* Logo grows slightly on hover for visual feedback */
+}
+
+.partner-logo {
+    height: 100px; /* or any size that fits your design */
+    width: auto;
+    display: block; /* This ensures that the logos align properly in their anchor tags */
+}
+
+/* Footer styles */
+.footer-social-links {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.footer-social-link {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px; /* Size of the circular images */
+    height: 50px; /* Size of the circular images */
+}
+
+.footer-social-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social-link:hover {
+    transform: scale(1.1);
+}
+
+.footer-title h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555; /* Change to suit your color scheme */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Spacing between icons */
+    padding-bottom: 20px;
+}
+
+.contact-item {
+    flex: 1;
+    max-width: 120px; /* Maximum size for each contact item */
+}
+
+.contact-link.contact-icon {
+    display: block;
+    width: 60px; /* Circle size */
+    height: 60px;
+    border-radius: 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto; /* Center in the flex container */
+    transition: transform 0.3s ease;
+}
+
+.contact-link.contact-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.linkedin {
+    background-color: #0077b5; /* LinkedIn brand color */
+    background-image: url('linkedin.png');
+}
+
+.email {
+    background-color: #D44638; /* Email icon color, adjust as needed */
+    background-image: url('email-icon.png'); /* Replace with your email icon */
+}
+
+.personal-website {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-item {
+        max-width: none;
+    }
+}
+
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #21273e; 
+}
+
+.header-title {
+    font-size: 2em; /* Large font size for the name */
+    margin: 0; 
+    color : #ffffff;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+ /* General button styling */
+.header-btn {
+    padding: 10px 20px;
+    margin-left: 10px; /* Space between buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white; /* Text color */
+    text-transform: uppercase; /* Capitalize text */
+    font-weight: bold; /* Bold font */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Button hover effect */
+.header-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Specific styles for the 'Contact Now!' button to make it stand out */
+.contact-btn {
+    background-color: #28a745; /* Bootstrap success green */
+}
+
+.contact-btn:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+
+/* Add this if your buttons are links to remove default link color */
+.header-btn:link, .header-btn:visited {
+    color: white; /* Ensures the text color is white even for links */
+}
+
+.contact-btn {
+    background-color: #008CBA; /* Different color for the Contact Now! button */
+}
+
+.contact-btn:hover {
+    background-color: #005f73;
+}
+
+
+.contact-info {
+    margin: 20px 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.rounded-box {
+    background-color: #f9f9f9; /* Light grey background, change as needed */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.rounded-box h2 {
+    font-size: 1.5em;
+    color: #333; /* Dark grey text, change as needed */
+    margin-bottom: 15px;
+}
+
+.rounded-box ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.rounded-box ul li {
+    background-color: #fff; /* White background for list items */
+    border: 1px solid #ddd; /* Light grey border for list items */
+    border-radius: 10px; /* Rounded corners for list items */
+    padding: 10px;
+    margin-bottom: 8px; /* Spacing between list items */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .rounded-box {
+        margin: 10px;
+    }
+}
+
+.contact-section .rounded-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-actions {
+    text-align: right;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background-color: #5cb85c; /* Green */
+    color: white;
+}
+
+.reset-btn {
+    background-color: #f0ad4e; /* Orange */
+    color: white;
+}
+
+/* Add your media queries to make sure the form is responsive */

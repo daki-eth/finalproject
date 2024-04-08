@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Education - Damian Lucic</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="header-title">Damian Lucic</h1>
+        <nav class="site-nav">
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="#">Service 1</a>
+                    <a href="#">Service 2</a>
+                    <a href="#">Service 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">About</button>
+                <div class="dropdown-content">
+                    <a href="#">About Me</a>
+                    <a href="#">My Resume</a>
+                    <a href="#">Testimonials</a>
+                </div>
+            </div>
+            <button class="header-btn">Portfolio</button>
+            <button class="header-btn contact-btn">Contact Now!</button>
+        </nav>
+    </header>
+    
+<!-- Navigation menu -->
+<nav class="navbar">
+    <div id="bitcoinPriceContainer" class="bitcoin-price">
+        <span id="bitcoinPrice">BTC Price: Loading...</span>
+    </div>
+</nav>
+
+
+    
+    <main class="main-content">
+        <section class="image-section">
+            <img src="myimage.jpg" id="myImage" alt="Damian Lucic" class="responsive-image" onclick="toggleImageSize()">
+            <p class="image-caption">Click to Enlarge</p>
+        </section>
+          
+        <section>
+            <div class="rounded-box">
+                <h2>Education</h2>
+                <ul>
+                    <li>High School: Martingrove Collegiate Institution(2017 - 2021)</li>
+                    <li>University: Toronto Metropolitan University (Ryerson) (2021 - 2025)</li>
+                </ul>
+            </div>
+        
+            <div class="rounded-box">
+                <h2>Courses/Program</h2>
+                <ul>
+                    <li>I'm currently enrolled in the Business and Technology Management (BTM) program,
+                        with a minor in Computer Science.
+                        I am looking forward to diving into web design in one of my upcoming classes!
+                        While I have a keen interest in computer science, I also enjoy the business aspects,
+                        which is why I chose the BTM program over a full Computer Science major.</li>
+                </ul>
+            </div>
+        
+            <div class="rounded-box">
+                <h3>Most Useful Course</h3>
+                <ul>
+                    <li>The CPS 109 course I took has been my most useful course as it taught me
+                        the basics of python which I have used to expanded my programming skills and
+                        has let me learn how to program projects I desire.</li>
+                </ul>
+            </div>
+        
+            <div class="rounded-box">
+                <h2>Educational Awards</h2>
+                <ul>
+                    <li>Honours (2021)</li>
+                </ul>
+            </div>
+        
+            <div class="rounded-box">
+                <h2>Extra-curricular Activities</h2>
+                <ul>
+                    <li>Member of the Electric car team</li>
+                    <li>MMA and BJJ training at Xtreme Couture Toronto Gym</li>
+                    <li>Programing auto checkout bots</li>
+                    <li>TMU Volleyball Intramurals</li>
+                </ul>
+            </div>
+        </section>
+        
+    </main>
+    
+    <section class="partnerships">
+        <h2>My Partnerships</h2>
+        <div class="partners">
+            <a href="https://linktr.ee/betpulse" target="_blank" class="partner-link">
+                <img src="http://www.yourwebsite.com/path/to/BetPulse.jpg" alt="BetPulse" class="partner-logo">
+            </a>
+            <a href="https://www.instagram.com/daki.kicks/" target="_blank" class="partner-link">
+                <img src="DakiKicks.jpg" alt="Daki-Kicks Logo" class="partner-logo">
+            </a>
+            <!-- For more partnerships -->
+        </div>
+    </section>
+    
+
+
+    <!-- Contact Us Section -->
+<section class="contact-section">
+    <div class="rounded-box">
+        <h2>Contact Us</h2>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Are you a current user?</label><br>
+                <input type="radio" id="userYes" name="currentUser" value="yes">
+                <label for="userYes">Yes</label><br>
+                <input type="radio" id="userNo" name="currentUser" value="no">
+                <label for="userNo">No</label>
+            </div>
+            
+            <div class="form-group">
+                <label>What services are you interested in?</label><br>
+                <input type="checkbox" id="service1" name="service" value="Web Design">
+                <label for="service1">Web Design</label><br>
+                <input type="checkbox" id="service2" name="service" value="SEO">
+                <label for="service2">SEO</label><br>
+                <input type="checkbox" id="service3" name="service" value="Marketing">
+                <label for="service3">Marketing</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="priority">Priority:</label>
+                <select name="priority" id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn submit-btn">Submit</button>
+                <button type="reset" class="btn reset-btn">Clear</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+    
+    <footer>
+        <div class="footer-title">
+            <h3>Find us here:</h3>
+        </div>
+        <div class="contact-container">
+            <div class="contact-item">
+                <a href="https://www.linkedin.com/in/damian-lucic/" class="contact-link contact-icon linkedin"></a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:damian.lucic@torontmu.ca" class="contact-link contact-icon email"></a>
+            </div>
+            <!-- Add other contact links with appropriate classes -->
+        </div>
+    </footer>
+    
+</body>
+</html>
