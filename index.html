@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,82 +10,54 @@
     <script src="main.js" defer></script>
     <link rel="canonical" href="https://www.yourwebsite.com/">
 </head>
+
 <body>
-    <header class="site-header">
-        <h1 class="header-title">Damian Lucic</h1>
-        <nav class="site-nav">
-            <div class="dropdown">
-                <button class="dropbtn">Services</button>
-                <div class="dropdown-content">
-                    <a href="#" title="Web Design Services">Service 1</a>
-                    <a href="#" title="SEO Services">Service 2</a>
-                    <a href="#" title="Marketing Services">Service 3</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">About</button>
-                <div class="dropdown-content">
-                    <a href="#" title="About Damian Lucic">About Me</a>
-                    <a href="Resume.pdf" title="Damian Lucic's Resume" target="_blank">My Resume</a>
-                    <a href="#" title="Testimonials for Damian Lucic">Testimonials</a>
-                </div>
-            </div>
-            <a href="#partnerships" class="header-btn" title="Damian Lucic Portfolio">Portfolio</a>
-            <a href="#contact" class="header-btn contact-btn" title="Contact Damian Lucic">Contact Now!</a>
-        </nav>
-    </header>
+    <nav class="site-nav">
+        <a href="#home" class="header-btn" title="Home">Home</a>
+        <a href="#about" class="header-btn" title="About Damian Lucic">About Me</a>
+        <a href="#partnerships" class="header-btn" title="Damian Lucic Portfolio">Portfolio</a>            
+        <a href="#contact" class="header-btn contact-btn" title="Contact Damian Lucic">Contact Now!</a>
+    </nav>
 
-    <main class="main-content">
-        <section class="image-section">
-            <img src="myimage.jpg" id="myImage" alt="Damian Lucic posing" class="responsive-image" onclick="toggleImageSize()">
-            <p class="image-caption">Click to Enlarge</p>
-        </section>
+    <div class="main-content">
+        <div class="Home-Page">
+            <h1>Welcome!</h1>
+            <p class="title">
+                Hello! I'm Damian Lucic, currently pursuing a Business and <br>
+                Technology Management (BTM) program with a minor in Computer Science at Toronto Metropolitan University.
+            </p>
+        </div>
+        <div class="resume-buttons">
+            <a href="link_to_your_resume.pdf" class="resume-button" download>View Resume</a>
+        </div>
+    </div>
+    
+  
+        <section id="about" class="content-section">
+            <h2>Education</h2>
+            <p>High School: Martingrove Collegiate Institution (2017 - 2021)</p>
+            <p>University: Toronto Metropolitan University (Ryerson) (2021 - 2025)</p>
 
-        <section>
-            <div class="rounded-box">
-                <h2>Education</h2>
-                <ul>
-                    <li>High School: Martingrove Collegiate Institution (2017 - 2021)</li>
-                    <li>University: Toronto Metropolitan University (Ryerson) (2021 - 2025)</li>
-                </ul>
-            </div>
+            <h2>Courses/Program</h2>
+            <p>I'm currently enrolled in the Business and Technology Management (BTM) program,
+                with a minor in Computer Science. I am looking forward to diving into web design
+                in one of my upcoming classes! While I have a keen interest in computer science,
+                I also enjoy the business aspects, which is why I chose the BTM program over a
+                full Computer Science major.</p>
 
-            <div class="rounded-box">
-                <h2>Courses/Program</h2>
-                <ul>
-                    <li>I'm currently enrolled in the Business and Technology Management (BTM) program,
-                        with a minor in Computer Science.
-                        I am looking forward to diving into web design in one of my upcoming classes!
-                        While I have a keen interest in computer science, I also enjoy the business aspects,
-                        which is why I chose the BTM program over a full Computer Science major.</li>
-                </ul>
-            </div>
+            <h3>Most Useful Course</h3>
+            <p>The CPS 109 course I took has been my most useful course as it taught me
+                the basics of python which I have used to expanded my programming skills and
+                has let me learn how to program projects I desire.</p>
 
-            <div class="rounded-box">
-                <h3>Most Useful Course</h3>
-                <ul>
-                    <li>The CPS 109 course I took has been my most useful course as it taught me
-                        the basics of python which I have used to expanded my programming skills and
-                        has let me learn how to program projects I desire.</li>
-                </ul>
-            </div>
+            <h2>Educational Awards</h2>
+            <p>Honours (2021)</p>
 
-            <div class="rounded-box">
-                <h2>Educational Awards</h2>
-                <ul>
-                    <li>Honours (2021)</li>
-                </ul>
-            </div>
-
-            <div class="rounded-box">
-                <h2>Extra-curricular Activities</h2>
-                <ul>
-                    <li>Member of the Electric car team</li>
-                    <li>MMA and BJJ training at Xtreme Couture Toronto Gym</li>
-                    <li>Programing auto checkout bots</li>
-                    <li>TMU Volleyball Intramurals</li>
-                </ul>
-            </div>
+            <h2>Extra-curricular Activities</h2>
+            <p>Member of the Electric car team</p>
+            <p>MMA and BJJ training at Xtreme Couture Toronto Gym</p>
+            <p>Programming auto checkout bots</p>
+            <p>TMU Volleyball Intramurals</p>
         </section>
         
         <section id="partnerships" class="partnerships">

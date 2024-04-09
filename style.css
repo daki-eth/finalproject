@@ -1,556 +1,103 @@
-/* Reset and base styles */
-* {
-    box-sizing: border-box;
+/* Reset default padding and margin */
+html, body {
     margin: 0;
     padding: 0;
-}
-
-body, h1, h2, h3, p, ul, li, a {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-}
-
-/* Header styles */
-.header {
-    background-color: #f8f8f8;
-    padding: 20px;
-    text-align: center;
-}
-
-.header-content {
-    display: inline-block;
-}
-
-.header-title {
-    margin-bottom: 10px;
-}
-
-/* Navbar styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #21273e;
-    color: white;
-}
-
-/* Uniform button styles */
-.header-btn, .dropbtn {
-    padding: 10px 15px;
-    margin-left: 10px; /* Maintain uniform spacing between buttons */
-    border: none;
-    border-radius: 5px;
-    background-color: #005f73; /* Set your desired button color */
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Hover effect for buttons */
-.header-btn:hover, .dropbtn:hover {
-    background-color: #003d4d; /* A slightly darker shade for the hover effect */
-}
-
-/* Ensuring link-styled buttons look consistent */
-.header-btn:link, .header-btn:visited,
-.dropbtn:link, .dropbtn:visited {
-    color: white; /* Text color stays white for all button states */
-}
-
-/* Dropdown styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-@keyframes ticker {
-    0% { transform: translate3d(100%, 0, 0); }
-    100% { transform: translate3d(-100%, 0, 0); }
-}
-
-/* Main content styles */
-.main-content {
-    padding: 20px;
-}
-
-.image-section, .education-section, .courses-section, .useful-course-section, .awards-section, .activities-section {
-    margin-bottom: 40px;
-}
-
-.section-title {
-    margin-bottom: 10px;
-}
-
-.section-subtitle {
-    margin-bottom: 5px;
-}
-
-.responsive-image {
-    width: 200px; /* Initial width, matches the JavaScript condition */
-    height: auto; /* Maintain aspect ratio */
-    transition: width 0.3s ease; /* Smooth transition for width change */
-}
-
-.image-caption {
-    text-align: left;
-    margin-top: 5px;
-}
-
-.partnerships {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.partners {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.partner-link {
-    display: inline-block;
-    margin: 10px;
-    transition: transform 0.3s ease;
-}
-
-.partner-link:hover {
-    transform: scale(1.1); /* Logo grows slightly on hover for visual feedback */
-}
-
-.partner-logo {
-    height: 100px; /* or any size that fits your design */
-    width: auto;
-    display: block; /* This ensures that the logos align properly in their anchor tags */
-}
-
-/* Footer styles */
-.footer-social-links {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px; /* Adjust as needed */
-}
-
-.footer-social-link {
-    display: inline-block;
-    margin: 0 10px;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 50px; /* Size of the circular images */
-    height: 50px; /* Size of the circular images */
-}
-
-.footer-social-logo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
 }
-
-.footer-social-link:hover {
-    transform: scale(1.1);
-}
-
-.footer-title h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #555; /* Change to suit your color scheme */
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px; /* Spacing between icons */
-    padding-bottom: 20px;
-}
-
-.contact-item {
-    flex: 1;
-    max-width: 120px; /* Maximum size for each contact item */
-}
-
-.contact-link.contact-icon {
-    display: block;
-    width: 60px; /* Circle size */
-    height: 60px;
-    border-radius: 50%;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto; /* Center in the flex container */
-    transition: transform 0.3s ease;
-}
-
-.form-actions {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: flex-end; /* Align to the end of the form */
-    gap: 10px; /* Add some space between the buttons */
-}
-
-.btn,
-.submit-btn,
-.reset-btn,
-.keyboard-btn {
-    padding: 10px 20px; /* Same padding for all buttons */
-    border: none; /* No border for all buttons */
-    border-radius: 5px; /* Same border-radius for all buttons */
-    cursor: pointer; /* Same cursor for all buttons */
-    font-size: 16px; /* Same font size for all buttons */
-    font-weight: bold; /* Same font weight for all buttons */
-    transition: background-color 0.3s; /* Smooth transition for all buttons */
-}
-
-/* Set the same background and text colors for all buttons */
-.btn,
-.submit-btn,
-.reset-btn,
-.keyboard-btn {
-    background-color: #4CAF50; /* Replace with the desired color for buttons */
-    color: white; /* Replace with the desired text color */
-}
-
-/* Hover effects */
-.btn:hover,
-.submit-btn:hover,
-.reset-btn:hover,
-.keyboard-btn:hover {
-    background-color: #45a049; /* Darken the button on hover */
-}
-
-/* For the keyboard button to move it to the left, use margin-right:auto */
-.keyboard-btn {
-    margin-right: auto; /* Pushes the button to the left */
-}
-
-/* Add focus styles for better accessibility */
-.btn:focus,
-.submit-btn:focus,
-.reset-btn:focus,
-.keyboard-btn:focus {
-    outline: 2px solid #0056b3; /* A blue outline to match default browser focus style */
-}
-
-.contact-link.contact-icon:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-.linkedin {
-    background-color: #0077b5; /* LinkedIn brand color */
-    background-image: url('linkedin.png');
-}
-
-.email {
-    background-color: #D44638; /* Email icon color, adjust as needed */
-    background-image: url('email-icon.png'); /* Replace with your email icon */
-}
-
-.personal-website {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 600px) {
-    .contact-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-item {
-        max-width: none;
-    }
-}
-
 
 .site-header {
+    background-color: #333;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.site-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #21273e; 
+    justify-content: flex-end; 
+    padding: 20px; 
+    background-color: #333; 
 }
 
-.header-title {
-    font-size: 2em; /* Large font size for the name */
-    margin: 0; 
-    color : #ffffff;
+.header-btn {
+    color: #fff; 
+    text-decoration: none;
+    padding: 10px 20px; 
+    margin-left: 10px; 
+    border-radius: 5px; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
 }
 
-.header-left h1 {
-    margin: 0;
-    font-size: 2em;
+.header-btn:first-child {
+    margin-left: 0; 
 }
 
-.header-right {
+.header-btn:hover {
+    background-color: #555; 
+}
+
+.contact-btn {
+    background-color: #007bff; 
+}
+
+.contact-btn:hover {
+    background-color: #0056b3; 
+}
+
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* WELCOME PAGE */
+/* ----------------------------------------------------------------------------------------------------------------*/
+
+
+body {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif; /* Use your preferred font */
 }
 
-.dropbtn {
-    background-color: #4CAF50;
+/* Style the main content to fill the screen and center the text inside it */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+    min-height: 100vh;
+    background: #F8F8F8; /* Change to desired background color */
+}
+
+.main-content h1 {
+    font-size: 4rem;
+    color: #333; /* Adjust the color to match your design */
+    margin: 0 0 20px 0;
+}
+
+
+.main-content ul li {
+    font-size: 1.25rem;
+    margin-bottom: 10px; /* Adds spacing between list items */
+}
+
+.main-content a.resume-button {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
     color: white;
-    padding: 10px;
-    font-size: 16px;
+    background-color: #007bff; /* Adjust button color as needed */
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
     border: none;
     cursor: pointer;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.main-content a.resume-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
 }
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
- /* General button styling */
-.header-btn {
-    padding: 10px 20px;
-    margin-left: 10px; /* Space between buttons */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #007bff; /* Bootstrap primary blue */
-    color: white; /* Text color */
-    text-transform: uppercase; /* Capitalize text */
-    font-weight: bold; /* Bold font */
-    text-decoration: none; /* Remove underline from links */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth background transition */
-}
-
-/* Button hover effect */
-.header-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-/* Specific styles for the 'Contact Now!' button to make it stand out */
-.contact-btn {
-    background-color: #28a745; /* Bootstrap success green */
-}
-
-.contact-btn:hover {
-    background-color: #218838; /* Darker shade on hover */
-}
-
-/* Add this if your buttons are links to remove default link color */
-.header-btn:link, .header-btn:visited {
-    color: white; /* Ensures the text color is white even for links */
-}
-
-.contact-btn {
-    background-color: #008CBA; /* Different color for the Contact Now! button */
-}
-
-.contact-btn:hover {
-    background-color: #005f73;
-}
-
-
-.contact-info {
-    margin: 20px 0;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-.rounded-box {
-    background-color: #f9f9f9; /* Light grey background, change as needed */
-    border-radius: 15px; /* Rounded corners */
-    padding: 20px;
-    margin: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.rounded-box h2 {
-    font-size: 1.5em;
-    color: #333; /* Dark grey text, change as needed */
-    margin-bottom: 15px;
-}
-
-.rounded-box ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0;
-}
-
-.rounded-box ul li {
-    background-color: #fff; /* White background for list items */
-    border: 1px solid #ddd; /* Light grey border for list items */
-    border-radius: 10px; /* Rounded corners for list items */
-    padding: 10px;
-    margin-bottom: 8px; /* Spacing between list items */
-}
-
-/* Responsive design for smaller screens */
-@media screen and (max-width: 768px) {
-    .rounded-box {
-        margin: 10px;
-    }
-}
-
-.contact-section .rounded-box {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px; /* Reduced padding */
-    margin: 20px auto; /* Center form on the page with auto margins */
-    max-width: 600px; /* Limit width of form for better layout */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    display: flex; /* Use flexbox to layout label and field */
-    align-items: center; /* Align items vertically */
-    margin-bottom: 10px; /* Reduced margin */
-}
-
-.form-group label {
-    flex: 1; /* Label takes up 1 portion of the flex space */
-    margin-right: 10px; /* Spacing between label and input */
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea,
-.form-group select {
-    flex: 2; /* Input fields take up 2 portions of the flex space */
-    padding: 8px; /* Reduced padding */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Styles for the radio buttons and checkboxes */
-.form-group.inline-options {
-    flex-wrap: wrap; /* Allow options to wrap */
-}
-
-.form-group.inline-options label,
-.form-group.inline-options input[type="radio"],
-.form-group.inline-options input[type="checkbox"] {
-    margin-right: 15px; /* Space out the options */
-}
-
-/* Styles for form actions (submit/reset buttons) */
-.form-actions {
-    text-align: right;
-    padding-top: 10px; /* Space above the buttons */
-}
-
-.btn,
-.submit-btn,
-.reset-btn,
-.keyboard-btn {
-    /* ... existing button styles ... */
-}
-
-/* Set the same background and text colors for all buttons */
-/* ... existing button colors and hover effects ... */
-
-/* Contact section specific styles */
-.contact-info {
-    margin: 20px 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* Add media queries to adjust layout on smaller screens */
-@media screen and (max-width: 600px) {
-    .form-group {
-        flex-direction: column; /* Stack label and input on small screens */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .form-group label {
-        margin-bottom: 5px; /* Space between label and input */
-    }
-
-    .form-group.inline-options label,
-    .form-group.inline-options input[type="radio"],
-    .form-group.inline-options input[type="checkbox"] {
-        margin-right: 0; /* Remove margin on small screens */
-    }
-
-    .form-actions {
-        text-align: center; /* Center buttons on small screens */
-    }
-}
-
-/*Accessability TOGGLE*/
-#accessibility-options {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 1000; /* Ensure it stays on top */
-}
-#accessibility-trigger {
-    cursor: pointer;
-    max-width: 50px; /* Example size, adjust as needed */
-}
-
-#options {
-    display: none; /* Start with options hidden */
-    text-align: center;
-}
-
-.dark-theme {
-    background-color: #333;
-    color: #f1f1f1;
-}
-/* Add your media queries to make sure the form is responsive */
