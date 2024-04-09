@@ -25,71 +25,46 @@ body, h1, h2, h3, p, ul, li, a {
     margin-bottom: 10px;
 }
 
-.header-button {
-    cursor: pointer;
-    padding: 10px 20px;
-    background-color: #005f73;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.header-button:hover {
-    background-color: #0a9396;
-}
-
-.header-output {
-    margin-top: 10px;
-}
-
-/* Navbar */
+/* Navbar styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background: #333; /* Example background color for navbar */
-    color: #fff; /* Example text color */
-}
-
-.bitcoin-price {
-    font-size: 1rem; /* Example font size */
-    padding: 10px; /* Example padding */
-}
-
-
-.nav-list {
-    list-style: none;
-    display: flex; /* This will place all items in a row */
-    justify-content: center; /* Center items in the nav */
-    align-items: center; /* Vertically align items in the nav */
-    padding: 10px;
-    margin: 0;
-}
-
-.nav-link, .drop-button {
+    background-color: #21273e;
     color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: flex; /* Align text within the link/button */
-    align-items: center;
-    transition: background-color 0.3s;
 }
 
-/* Make sure the button has no additional padding or borders */
-.drop-button {
-    background-color: #333; /* Match the navbar background */
+/* Uniform button styles */
+.header-btn, .dropbtn {
+    padding: 10px 15px;
+    margin-left: 10px; /* Maintain uniform spacing between buttons */
     border: none;
+    border-radius: 5px;
+    background-color: #005f73; /* Set your desired button color */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
-    display: inline-block; /* Aligns the button as an inline element */
-    margin: 0; /* Ensure there is no margin collapsing with other elements */
-    vertical-align: middle; /* Aligns the button vertically */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.header-btn:hover, .dropbtn:hover {
+    background-color: #003d4d; /* A slightly darker shade for the hover effect */
+}
+
+/* Ensuring link-styled buttons look consistent */
+.header-btn:link, .header-btn:visited,
+.dropbtn:link, .dropbtn:visited {
+    color: white; /* Text color stays white for all button states */
 }
 
 /* Dropdown styles */
 .dropdown {
-    position: relative; /* Needed for absolute positioning of dropdown-content */
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
@@ -97,23 +72,41 @@ body, h1, h2, h3, p, ul, li, a {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block; /* Show the dropdown content */
+    display: block;
 }
 
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
-    display: block; /* Dropdown links are full-width */
+    display: block;
 }
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
+}
+
+.crypto-ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.crypto-ticker-content {
+    display: inline-block;
+    animation: ticker 30s linear infinite;
+}
+
+@keyframes ticker {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
 }
 
 /* Main content styles */
@@ -467,54 +460,90 @@ html {
 .contact-section .rounded-box {
     background: #fff;
     border-radius: 10px;
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 600px;
+    padding: 20px; /* Reduced padding */
+    margin: 20px auto; /* Center form on the page with auto margins */
+    max-width: 600px; /* Limit width of form for better layout */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    margin-bottom: 1em;
+    display: flex; /* Use flexbox to layout label and field */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: .5em;
+    flex: 1; /* Label takes up 1 portion of the flex space */
+    margin-right: 10px; /* Spacing between label and input */
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea,
 .form-group select {
-    width: 100%;
-    padding: 0.5em;
+    flex: 2; /* Input fields take up 2 portions of the flex space */
+    padding: 8px; /* Reduced padding */
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+/* Styles for the radio buttons and checkboxes */
+.form-group.inline-options {
+    flex-wrap: wrap; /* Allow options to wrap */
+}
+
+.form-group.inline-options label,
+.form-group.inline-options input[type="radio"],
+.form-group.inline-options input[type="checkbox"] {
+    margin-right: 15px; /* Space out the options */
+}
+
+/* Styles for form actions (submit/reset buttons) */
 .form-actions {
     text-align: right;
+    padding-top: 10px; /* Space above the buttons */
 }
 
-.btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 10px;
+.btn,
+.submit-btn,
+.reset-btn,
+.keyboard-btn {
+    /* ... existing button styles ... */
 }
 
-.submit-btn {
-    background-color: #5cb85c; /* Green */
-    color: white;
+/* Set the same background and text colors for all buttons */
+/* ... existing button colors and hover effects ... */
+
+/* Contact section specific styles */
+.contact-info {
+    margin: 20px 0;
 }
 
-.reset-btn {
-    background-color: #f0ad4e; /* Orange */
-    color: white;
+html {
+    scroll-behavior: smooth;
 }
 
+/* Add media queries to adjust layout on smaller screens */
+@media screen and (max-width: 600px) {
+    .form-group {
+        flex-direction: column; /* Stack label and input on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .form-group label {
+        margin-bottom: 5px; /* Space between label and input */
+    }
+
+    .form-group.inline-options label,
+    .form-group.inline-options input[type="radio"],
+    .form-group.inline-options input[type="checkbox"] {
+        margin-right: 0; /* Remove margin on small screens */
+    }
+
+    .form-actions {
+        text-align: center; /* Center buttons on small screens */
+    }
+}
 
 /*Accessability TOGGLE*/
 #accessibility-options {

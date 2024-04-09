@@ -10,12 +10,12 @@
 </head>
 <body>
     <header class="site-header">
-        <h1 class="header-title">About Damian Lucic</h1> <!-- More descriptive -->
+        <h1 class="header-title">Damian Lucic</h1>
         <nav class="site-nav">
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="#" title="Web Design Services">Service 1</a> <!-- Title attributes for SEO -->
+                    <a href="#" title="Web Design Services">Service 1</a>
                     <a href="#" title="SEO Services">Service 2</a>
                     <a href="#" title="Marketing Services">Service 3</a>
                 </div>
@@ -24,19 +24,20 @@
                 <button class="dropbtn">About</button>
                 <div class="dropdown-content">
                     <a href="#" title="About Damian Lucic">About Me</a>
-                    <a href="#" title="Damian Lucic's Resume">My Resume</a>
+                    <a href="Resume.pdf" title="Damian Lucic's Resume" target="_blank">My Resume</a>
                     <a href="#" title="Testimonials for Damian Lucic">Testimonials</a>
                 </div>
             </div>
-            <button class="header-btn" title="Damian Lucic Portfolio">Portfolio</button>
-            <button class="header-btn contact-btn" title="Contact Damian Lucic">Contact Now!</button>
+            <a href="#partnerships" class="header-btn" title="Damian Lucic Portfolio">Portfolio</a>
+            <a href="#contact" class="header-btn contact-btn" title="Contact Damian Lucic">Contact Now!</a>
         </nav>
     </header>
     
+    
     <nav class="navbar">
-        <div id="bitcoinPriceContainer" class="bitcoin-price">
-            <span id="bitcoinPrice">BTC Price: Loading...</span>
-        </div>
+        <div id="cryptoTicker" class="crypto-ticker">
+            <div id="cryptoTickerContent" class="crypto-ticker-content"></div>
+        </div>        
     </nav>
 
     <main class="main-content">
@@ -92,7 +93,7 @@
             </div>
         </section>
         
-        <section class="partnerships">
+        <section id="partnerships" class="partnerships">
             <h2>My Partnerships</h2>
             <div class="partners">
                 <a href="https://linktr.ee/betpulse" target="_blank" class="partner-link" title="BetPulse Partnership">
@@ -115,7 +116,7 @@
             </div>
         </div>
 
-        <section class="contact-section">
+        <section id="contact" class="contact-section">
             <div class="rounded-box">
                 <h2>Contact Me</h2>
                 <form id="myForm">
