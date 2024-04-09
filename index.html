@@ -1,57 +1,55 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Education - Damian Lucic</title>
+    <title>Damian Lucic | Educator and Web Designer</title> <!-- Updated title with keywords -->
+    <meta name="description" content="Discover Damian Lucic's educational background in Business and Technology Management with a minor in Computer Science, his passion for web design, and achievements."> <!-- Meta description added -->
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="main.js" defer></script>
+    <link rel="canonical" href="https://www.yourwebsite.com/"> <!-- Canonical URL -->
 </head>
 <body>
     <header class="site-header">
-        <h1 class="header-title">Damian Lucic</h1>
+        <h1 class="header-title">About Damian Lucic</h1> <!-- More descriptive -->
         <nav class="site-nav">
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="#">Service 1</a>
-                    <a href="#">Service 2</a>
-                    <a href="#">Service 3</a>
+                    <a href="#" title="Web Design Services">Service 1</a> <!-- Title attributes for SEO -->
+                    <a href="#" title="SEO Services">Service 2</a>
+                    <a href="#" title="Marketing Services">Service 3</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">About</button>
                 <div class="dropdown-content">
-                    <a href="#">About Me</a>
-                    <a href="#">My Resume</a>
-                    <a href="#">Testimonials</a>
+                    <a href="#" title="About Damian Lucic">About Me</a>
+                    <a href="#" title="Damian Lucic's Resume">My Resume</a>
+                    <a href="#" title="Testimonials for Damian Lucic">Testimonials</a>
                 </div>
             </div>
-            <button class="header-btn">Portfolio</button>
-            <button class="header-btn contact-btn">Contact Now!</button>
+            <button class="header-btn" title="Damian Lucic Portfolio">Portfolio</button>
+            <button class="header-btn contact-btn" title="Contact Damian Lucic">Contact Now!</button>
         </nav>
     </header>
     
-<!-- Navigation menu -->
-<nav class="navbar">
-    <div id="bitcoinPriceContainer" class="bitcoin-price">
-        <span id="bitcoinPrice">BTC Price: Loading...</span>
-    </div>
-</nav>
+    <nav class="navbar">
+        <div id="bitcoinPriceContainer" class="bitcoin-price">
+            <span id="bitcoinPrice">BTC Price: Loading...</span>
+        </div>
+    </nav>
 
-
-    
     <main class="main-content">
         <section class="image-section">
-            <img src="myimage.jpg" id="myImage" alt="Damian Lucic" class="responsive-image" onclick="toggleImageSize()">
+            <img src="myimage.jpg" id="myImage" alt="Damian Lucic posing" class="responsive-image" onclick="toggleImageSize()"> <!-- More descriptive alt text -->
             <p class="image-caption">Click to Enlarge</p>
         </section>
-          
+
         <section>
             <div class="rounded-box">
                 <h2>Education</h2>
                 <ul>
-                    <li>High School: Martingrove Collegiate Institution(2017 - 2021)</li>
+                    <li>High School: Martingrove Collegiate Institution (2017 - 2021)</li>
                     <li>University: Toronto Metropolitan University (Ryerson) (2021 - 2025)</li>
                 </ul>
             </div>
@@ -94,28 +92,33 @@
             </div>
         </section>
         
-    </main>
-    
-    <section class="partnerships">
-        <h2>My Partnerships</h2>
-        <div class="partners">
-            <a href="https://linktr.ee/betpulse" target="_blank" class="partner-link">
-                <img src="http://www.yourwebsite.com/path/to/BetPulse.jpg" alt="BetPulse" class="partner-logo">
-            </a>
-            <a href="https://www.instagram.com/daki.kicks/" target="_blank" class="partner-link">
-                <img src="DakiKicks.jpg" alt="Daki-Kicks Logo" class="partner-logo">
-            </a>
-            <!-- For more partnerships -->
+        <section class="partnerships">
+            <h2>My Partnerships</h2>
+            <div class="partners">
+                <a href="https://linktr.ee/betpulse" target="_blank" class="partner-link" title="BetPulse Partnership">
+                    <img src="http://www.yourwebsite.com/path/to/BetPulse.jpg" alt="BetPulse" class="partner-logo">
+                </a>
+                <a href="https://www.instagram.com/daki.kicks/" target="_blank" class="partner-link" title="Daki-Kicks Instagram">
+                    <img src="DakiKicks.jpg" alt="Daki-Kicks Logo" class="partner-logo">
+                </a>
+                <!-- For more partnerships -->
+            </div>
+        </section>
+
+        <div id="accessibility-options" aria-label="Accessibility Options">
+            <img src="accessability.png" alt="Accessibility Options" id="accessibility-trigger" role="button" aria-haspopup="true" aria-controls="options" style="cursor: pointer;">
+            <div id="options" class="hidden" aria-hidden="true" style="text-align: center;">
+                <button id="increase-font-size" aria-label="Increase text size" style="margin: 5px;">Increase text size</button>
+                <button id="decrease-font-size" aria-label="Decrease text size" style="margin: 5px;">Decrease text size</button>
+                <button id="toggle-color-theme" aria-label="Toggle color theme" style="margin: 5px;">Toggle color theme</button>
+                <button id="reset-accessibility" aria-label="Reset accessibility" style="margin: 5px;">Reset settings</button>
+            </div>
         </div>
-    </section>
-    
 
-
-    <!-- Contact Us Section -->
-<section class="contact-section">
-    <div class="rounded-box">
-        <h2>Contact Us</h2>
-        <form id="myForm">
+        <section class="contact-section">
+            <div class="rounded-box">
+                <h2>Contact Me</h2>
+                <form id="myForm">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -164,6 +167,8 @@
             </div>
             
             <div class="form-actions">
+                <button id="keyboardButton" onclick="showOnScreenKeyboard()">On-Screen Keyboard</button>
+                
                 <button type="submit" class="btn submit-btn">Submit</button>
                 <button type="reset" class="btn reset-btn">Clear</button>
             </div>
@@ -172,17 +177,17 @@
 </section>
 
     
-    <footer>
-        <div class="footer-title">
-            <h3>Find us here:</h3>
+<footer>
+    <div class="footer-title">
+        <h3>Connect with Damian Lucic:</h3>
+    </div>
+    <div class="contact-container">
+        <div class="contact-item">
+            <a href="https://www.linkedin.com/in/damian-lucic/" class="contact-link contact-icon linkedin" title="Damian Lucic on LinkedIn"></a>
         </div>
-        <div class="contact-container">
-            <div class="contact-item">
-                <a href="https://www.linkedin.com/in/damian-lucic/" class="contact-link contact-icon linkedin"></a>
-            </div>
-            <div class="contact-item">
-                <a href="mailto:damian.lucic@torontmu.ca" class="contact-link contact-icon email"></a>
-            </div>
+        <div class="contact-item">
+            <a href="mailto:damian.lucic@torontmu.ca" class="contact-link contact-icon email" title="Email Damian Lucic"></a>
+        </div>
             <!-- Add other contact links with appropriate classes -->
         </div>
     </footer>

@@ -1,4 +1,5 @@
-// Existing functions remain unchanged
+const defaultFontSize = 17;
+
 function promptName() {
     var name = prompt("Please enter your name:");
     if (name != null && name != "") {
@@ -63,9 +64,9 @@ function handleContactClick() {
     alert("You clicked on the Contact Information section!");
 }
 
+
 // Close dropdowns when clicking outside
 window.addEventListener('click', function(event) {
-    // Check if the click is not on the dropdown button
     if (!event.target.matches('.drop-button')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -184,3 +185,49 @@ document.addEventListener('DOMContentLoaded', function() {
     updateBitcoinPrice(); // Update price on load
     setInterval(updateBitcoinPrice, 60000); // Update price every minute
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const trigger = document.getElementById('accessibility-trigger');
+    const options = document.getElementById('options');
+    const increaseBtn = document.getElementById('increase-font-size');
+    const decreaseBtn = document.getElementById('decrease-font-size');
+    const toggleThemeBtn = document.getElementById('toggle-color-theme');
+    const resetBtn = document.getElementById('reset-accessibility');
+
+    // Function to toggle the visibility of the accessibility options
+    trigger.onclick = function() {
+        options.style.display = options.style.display === 'block' ? 'none' : 'block';
+    };
+
+    // Function to adjust font size
+    function adjustFontSize(change) {
+        const bodyStyle = window.getComputedStyle(document.body);
+        const currentSize = parseFloat(bodyStyle.fontSize);
+        document.body.style.fontSize = `${currentSize + change}px`;
+    }
+
+    // Function to toggle the color theme
+    function toggleColorTheme() {
+        document.body.classList.toggle('dark-theme');
+    }
+
+    // Function to reset accessibility settings
+    function resetAccessibility() {
+        document.body.style.fontSize = `${defaultFontSize}px`; // Replace with your actual default font size
+        document.body.classList.remove('dark-theme');
+    }
+
+    // Event listener for increasing font size
+    increaseBtn.addEventListener('click', () => adjustFontSize(1));
+
+    // Event listener for decreasing font size
+    decreaseBtn.addEventListener('click', () => adjustFontSize(-1));
+
+    // Event listener for toggling color theme
+    toggleThemeBtn.addEventListener('click', () => toggleColorTheme());
+
+    // Event listener for resetting accessibility settings
+    resetBtn.addEventListener('click', () => resetAccessibility());
+});
+
+

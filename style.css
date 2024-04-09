@@ -229,6 +229,55 @@ body, h1, h2, h3, p, ul, li, a {
     transition: transform 0.3s ease;
 }
 
+.form-actions {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align to the end of the form */
+    gap: 10px; /* Add some space between the buttons */
+}
+
+.btn,
+.submit-btn,
+.reset-btn,
+.keyboard-btn {
+    padding: 10px 20px; /* Same padding for all buttons */
+    border: none; /* No border for all buttons */
+    border-radius: 5px; /* Same border-radius for all buttons */
+    cursor: pointer; /* Same cursor for all buttons */
+    font-size: 16px; /* Same font size for all buttons */
+    font-weight: bold; /* Same font weight for all buttons */
+    transition: background-color 0.3s; /* Smooth transition for all buttons */
+}
+
+/* Set the same background and text colors for all buttons */
+.btn,
+.submit-btn,
+.reset-btn,
+.keyboard-btn {
+    background-color: #4CAF50; /* Replace with the desired color for buttons */
+    color: white; /* Replace with the desired text color */
+}
+
+/* Hover effects */
+.btn:hover,
+.submit-btn:hover,
+.reset-btn:hover,
+.keyboard-btn:hover {
+    background-color: #45a049; /* Darken the button on hover */
+}
+
+/* For the keyboard button to move it to the left, use margin-right:auto */
+.keyboard-btn {
+    margin-right: auto; /* Pushes the button to the left */
+}
+
+/* Add focus styles for better accessibility */
+.btn:focus,
+.submit-btn:focus,
+.reset-btn:focus,
+.keyboard-btn:focus {
+    outline: 2px solid #0056b3; /* A blue outline to match default browser focus style */
+}
+
 .contact-link.contact-icon:hover {
     transform: scale(1.1); /* Slight zoom on hover */
 }
@@ -466,4 +515,26 @@ html {
     color: white;
 }
 
+
+/*Accessability TOGGLE*/
+#accessibility-options {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensure it stays on top */
+}
+#accessibility-trigger {
+    cursor: pointer;
+    max-width: 50px; /* Example size, adjust as needed */
+}
+
+#options {
+    display: none; /* Start with options hidden */
+    text-align: center;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f1f1f1;
+}
 /* Add your media queries to make sure the form is responsive */
