@@ -91,19 +91,6 @@ body, h1, h2, h3, p, ul, li, a {
     background-color: #f1f1f1;
 }
 
-.crypto-ticker {
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-
-.crypto-ticker-content {
-    display: inline-block;
-    animation: ticker 30s linear infinite;
-}
-
 @keyframes ticker {
     0% { transform: translate3d(100%, 0, 0); }
     100% { transform: translate3d(-100%, 0, 0); }

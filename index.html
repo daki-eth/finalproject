@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damian Lucic | BTM Student at TMU</title> <!-- Updated title with keywords -->
-    <meta name="description" content="Discover Damian Lucic's educational background in Business and Technology Management with a minor in Computer Science, his passion for web design, and achievements."> <!-- Meta description added -->
+    <title>Damian Lucic | BTM Student at TMU</title>
+    <meta name="description" content="Discover Damian Lucic's educational background in Business and Technology Management with a minor in Computer Science, his passion for web design, and achievements.">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="main.js" defer></script>
-    <link rel="canonical" href="https://www.yourwebsite.com/"> <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.yourwebsite.com/">
 </head>
 <body>
     <header class="site-header">
@@ -32,17 +33,10 @@
             <a href="#contact" class="header-btn contact-btn" title="Contact Damian Lucic">Contact Now!</a>
         </nav>
     </header>
-    
-    
-    <nav class="navbar">
-        <div id="cryptoTicker" class="crypto-ticker">
-            <div id="cryptoTickerContent" class="crypto-ticker-content"></div>
-        </div>        
-    </nav>
 
     <main class="main-content">
         <section class="image-section">
-            <img src="myimage.jpg" id="myImage" alt="Damian Lucic posing" class="responsive-image" onclick="toggleImageSize()"> <!-- More descriptive alt text -->
+            <img src="myimage.jpg" id="myImage" alt="Damian Lucic posing" class="responsive-image" onclick="toggleImageSize()">
             <p class="image-caption">Click to Enlarge</p>
         </section>
 
@@ -54,7 +48,7 @@
                     <li>University: Toronto Metropolitan University (Ryerson) (2021 - 2025)</li>
                 </ul>
             </div>
-        
+
             <div class="rounded-box">
                 <h2>Courses/Program</h2>
                 <ul>
@@ -65,7 +59,7 @@
                         which is why I chose the BTM program over a full Computer Science major.</li>
                 </ul>
             </div>
-        
+
             <div class="rounded-box">
                 <h3>Most Useful Course</h3>
                 <ul>
@@ -74,14 +68,14 @@
                         has let me learn how to program projects I desire.</li>
                 </ul>
             </div>
-        
+
             <div class="rounded-box">
                 <h2>Educational Awards</h2>
                 <ul>
                     <li>Honours (2021)</li>
                 </ul>
             </div>
-        
+
             <div class="rounded-box">
                 <h2>Extra-curricular Activities</h2>
                 <ul>
@@ -102,7 +96,6 @@
                 <a href="https://www.instagram.com/daki.kicks/" target="_blank" class="partner-link" title="Daki-Kicks Instagram">
                     <img src="DakiKicks.jpg" alt="Daki-Kicks Logo" class="partner-logo">
                 </a>
-                <!-- For more partnerships -->
             </div>
         </section>
 
@@ -120,75 +113,77 @@
             <div class="rounded-box">
                 <h2>Contact Me</h2>
                 <form id="myForm">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Are you a current user?</label><br>
+                        <input type="radio" id="userYes" name="currentUser" value="yes">
+                        <label for="userYes">Yes</label><br>
+                        <input type="radio" id="userNo" name="currentUser" value="no">
+                        <label for="userNo">No</label>
+                    </div>
+                    
+                    <div class="form-group">
+    <label>What services are you interested in?</label><br>
+    <input type="checkbox" id="service1" name="service" value="Web Design">
+    <label for="service1">Web Design</label><br>
+    <input type="checkbox" id="service2" name="service" value="SEO">
+    <label for="service2">SEO</label><br>
+    <input type="checkbox" id="service3" name="service" value="Marketing">
+    <label for="service3">Marketing</label><br>
+    <input type="checkbox" id="service4" name="service" value="Other">
+    <label for="service4">Other</label><br>
+</div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="priority">Priority:</label>
+                        <select name="priority" id="priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button id="keyboardButton" onclick="showOnScreenKeyboard()">On-Screen Keyboard</button>
+                        
+                        <button type="submit" class="btn submit-btn">Submit</button>
+                        <button type="reset" class="btn reset-btn">Clear</button>
+                    </div>
+                </form>
             </div>
-            
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Are you a current user?</label><br>
-                <input type="radio" id="userYes" name="currentUser" value="yes">
-                <label for="userYes">Yes</label><br>
-                <input type="radio" id="userNo" name="currentUser" value="no">
-                <label for="userNo">No</label>
-            </div>
-            
-            <div class="form-group">
-                <label>What services are you interested in?</label><br>
-                <input type="checkbox" id="service1" name="service" value="Web Design">
-                <label for="service1">Web Design</label><br>
-                <input type="checkbox" id="service2" name="service" value="SEO">
-                <label for="service2">SEO</label><br>
-                <input type="checkbox" id="service3" name="service" value="Marketing">
-                <label for="service3">Marketing</label>
-            </div>
-            
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="priority">Priority:</label>
-                <select name="priority" id="priority">
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-            </div>
-            
-            <div class="form-actions">
-                <button id="keyboardButton" onclick="showOnScreenKeyboard()">On-Screen Keyboard</button>
-                
-                <button type="submit" class="btn submit-btn">Submit</button>
-                <button type="reset" class="btn reset-btn">Clear</button>
-            </div>
-        </form>
-    </div>
-</section>
-
+        </section>
+    </main>
     
-<footer>
-    <div class="footer-title">
-        <h3>Connect with Damian Lucic:</h3>
-    </div>
-    <div class="contact-container">
-        <div class="contact-item">
-            <a href="https://www.linkedin.com/in/damian-lucic/" class="contact-link contact-icon linkedin" title="Damian Lucic on LinkedIn"></a>
+    <footer>
+        <div class="footer-title">
+            <h3>Connect with Damian Lucic:</h3>
         </div>
-        <div class="contact-item">
-            <a href="mailto:damian.lucic@torontmu.ca" class="contact-link contact-icon email" title="Email Damian Lucic"></a>
-        </div>
+        <div class="contact-container">
+            <div class="contact-item">
+                <a href="https://www.linkedin.com/in/damian-lucic/" class="contact-link contact-icon linkedin" title="Damian Lucic on LinkedIn"></a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:damian.lucic@torontmu.ca" class="contact-link contact-icon email" title="Email Damian Lucic"></a>
+            </div>
             <!-- Add other contact links with appropriate classes -->
         </div>
     </footer>
