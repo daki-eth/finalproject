@@ -210,3 +210,97 @@ html, body {
         text-align: center;
     }
 }
+
+/* Contact */
+/* Contact Section */
+.contact-section {
+    padding: 4em 0; /* Adjust top and bottom padding as needed */
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2em;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px; /* Contain the width and center everything */
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.contact-info, .contact-form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 300px; /* Set a max-width for contact info boxes */
+    margin-bottom: 20px; /* Space between elements */
+}
+
+.contact-method {
+    margin-bottom: 20px; /* Space between contact methods */
+}
+
+.contact-method h3 {
+    margin-top: 0.5em;
+}
+
+.contact-button, .submit-button, .clear-button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none; /* Remove text decoration from links */
+}
+
+.contact-button { background-color: #007bff; color: white; }
+.contact-button:hover { background-color: #0056b3; }
+.submit-button { background-color: #28a745; color: white; }
+.submit-button:hover { background-color: #218838; }
+.clear-button { background-color: #ffc107; color: white; }
+.clear-button:hover { background-color: #e0a800; }
+
+.feedback-message {
+    color: #28a745;
+    margin-top: 10px;
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: calc(100% - 20px); /* Subtract padding from the width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper { 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        max-width: none; /* Allow full width on mobile */
+        margin: 0 auto; /* Center each block */
+    }
+}

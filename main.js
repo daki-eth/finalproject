@@ -24,3 +24,12 @@ function rotateWelcome() {
 
 window.onload = rotateWelcome;
 
+ 
+/* Contact Form */
+document.getElementById('contactForm').addEventListener('submit', function(event){
+    event.preventDefault();
+    
+    document.querySelector('.contact-section').classList.add('message-sent');
+    document.querySelector('.feedback-message').textContent = 'Your message has been sent!';
+  });
+  

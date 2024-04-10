@@ -73,7 +73,7 @@
                     <img src="BetPulse.jpg" alt="Bet Pulse">
                 </a>
                 <div class="project-details">
-                    <h3><a href="https://t.me/bet_pulse" title="Bet Pulse">Co-Founder</a></h3>
+                    <h3><a href="https://t.me/bet_pulse" title="Bet Pulse">Bet Pulse</a></h3>
                     <p>Co-Founder of Bet Pulse. A Sports Betting Service.</p>
                 </div>
             </div>
@@ -81,47 +81,52 @@
     </section>
     
     
-    
-        
-        <section id="partnerships" class="partnerships">
-            <h2>My Partnerships</h2>
-            <div class="partners">
-                <a href="https://linktr.ee/betpulse" target="_blank" class="partner-link" title="BetPulse Partnership">
-                    <img src="http://www.yourwebsite.com/path/to/BetPulse.jpg" alt="BetPulse" class="partner-logo">
-                </a>
-                <a href="https://www.instagram.com/daki.kicks/" target="_blank" class="partner-link" title="Daki-Kicks Instagram">
-                    <img src="DakiKicks.jpg" alt="Daki-Kicks Logo" class="partner-logo">
-                </a>
+    <section class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-method">
+                    <span class="icon email-icon"></span>
+                    <h3>Email</h3>
+                    <p>your-email@example.com</p>
+                    <a href="mailto:your-email@example.com" class="contact-button">Send a message</a>
+                </div>
+                <div class="contact-method">
+                    <span class="icon whatsapp-icon"></span>
+                    <h3>WhatsApp</h3>
+                    <p>+1234567890</p>
+                    <a href="https://wa.me/1234567890" class="contact-button">Send a message</a>
+                </div>
+                <div class="contact-method">
+                    <span class="icon instagram-icon"></span>
+                    <h3>Instagram</h3>
+                    <p>@yourusername</p>
+                    <a href="https://www.instagram.com/yourusername" class="contact-button">Send a message</a>
+                </div>
             </div>
-        </section>
-
-
-        <section id="about" class="content-section">
-            <h2>Education</h2>
-            <p>High School: Martingrove Collegiate Institution (2017 - 2021)</p>
-            <p>University: Toronto Metropolitan University (Ryerson) (2021 - 2025)</p>
-
-            <h2>Courses/Program</h2>
-            <p>I'm currently enrolled in the Business and Technology Management (BTM) program,
-                with a minor in Computer Science. I am looking forward to diving into web design
-                in one of my upcoming classes! While I have a keen interest in computer science,
-                I also enjoy the business aspects, which is why I chose the BTM program over a
-                full Computer Science major.</p>
-
-            <h3>Most Useful Course</h3>
-            <p>The CPS 109 course I took has been my most useful course as it taught me
-                the basics of python which I have used to expanded my programming skills and
-                has let me learn how to program projects I desire.</p>
-
-            <h2>Educational Awards</h2>
-            <p>Honours (2021)</p>
-
-            <h2>Extra-curricular Activities</h2>
-            <p>Member of the Electric car team</p>
-            <p>MMA and BJJ training at Xtreme Couture Toronto Gym</p>
-            <p>Programming auto checkout bots</p>
-            <p>TMU Volleyball Intramurals</p>
-        </section>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="button" class="clear-button" onclick="document.getElementById('contactForm').reset()">Clear</button>
+                </div>
+                <p class="feedback-message"></p>
+            </form>
+        </div>
+    </section>
+    
+    
 
         <div id="accessibility-options" aria-label="Accessibility Options">
             <img src="accessability.png" alt="Accessibility Options" id="accessibility-trigger" role="button" aria-haspopup="true" aria-controls="options" style="cursor: pointer;">
@@ -133,69 +138,7 @@
             </div>
         </div>
 
-        <section id="contact" class="contact-section">
-            <div class="rounded-box">
-                <h2>Contact Me</h2>
-                <form id="myForm">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Are you a current user?</label><br>
-                        <input type="radio" id="userYes" name="currentUser" value="yes">
-                        <label for="userYes">Yes</label><br>
-                        <input type="radio" id="userNo" name="currentUser" value="no">
-                        <label for="userNo">No</label>
-                    </div>
-                    
-                    <div class="form-group">
-    <label>What services are you interested in?</label><br>
-    <input type="checkbox" id="service1" name="service" value="Web Design">
-    <label for="service1">Web Design</label><br>
-    <input type="checkbox" id="service2" name="service" value="SEO">
-    <label for="service2">SEO</label><br>
-    <input type="checkbox" id="service3" name="service" value="Marketing">
-    <label for="service3">Marketing</label><br>
-    <input type="checkbox" id="service4" name="service" value="Other">
-    <label for="service4">Other</label><br>
-</div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="priority">Priority:</label>
-                        <select name="priority" id="priority">
-                            <option value="low">Low</option>
-                            <option value="medium">Medium</option>
-                            <option value="high">High</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button id="keyboardButton" onclick="showOnScreenKeyboard()">On-Screen Keyboard</button>
-                        
-                        <button type="submit" class="btn submit-btn">Submit</button>
-                        <button type="reset" class="btn reset-btn">Clear</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
+        
     
     <footer>
         <div class="footer-title">
