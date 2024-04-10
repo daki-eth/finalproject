@@ -1,4 +1,3 @@
-/* Reset default padding and margin */
 html, body {
     margin: 0;
     padding: 0;
@@ -27,14 +26,14 @@ html, body {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
-    margin-left: 10px; /* Space between buttons */
+    margin-left: 10px; 
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
 .header-btn:hover {
-    background-color: #505050; /* Hover effect for all buttons */
+    background-color: #505050; 
 }
 
 .contact-btn {
@@ -47,9 +46,6 @@ html, body {
     background-color: #0056b3;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 /* WELCOME PAGE */
 .main-content {
@@ -70,16 +66,16 @@ html {
 }
 
 .main-content .title {
-    font-size: 1.25rem; /* Adjusted for better readability */
-    margin-bottom: 20px; /* Space before the button */
+    font-size: 1.25rem; 
+    margin-bottom: 20px; 
 }
 
 .main-content a.resume-button {
-    font-size: 1.3rem; /* Adjusted font size */
+    font-size: 1.3rem; 
     text-transform: uppercase;
     color: white;
     background-color: #007bff;
-    padding: 8px 20px; /* Adjusted padding */
+    padding: 8px 20px; 
     border-radius: 5px;
     margin-top: 20px;
     border: none;
@@ -118,13 +114,13 @@ html {
     flex: 1;
     max-width: 50%;
     font-size: 1.5rem;
-    margin-right: 20px; /* Spacing between text and image */
+    margin-right: 20px; 
 }
 
 .profile-image {
     flex: 1;
-    max-width: 500px; /* Adjusts the size of the image */
-    margin-left: 20px; /* Spacing between text and image */
+    max-width: 500px; 
+    margin-left: 20px; 
 }
 
 .profile-image img {
@@ -389,7 +385,7 @@ html {
 }
 
 .social-links img {
-    width: 30px; /* Adjust based on your icon size */
+    width: 30px; 
     height: auto;
     vertical-align: middle;
 }
@@ -403,8 +399,4 @@ html {
     .social-links a {
         margin: 0 5px;
     }
-}
-
-html {
-    scroll-behavior: smooth;
 }

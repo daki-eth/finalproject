@@ -8,53 +8,25 @@ function rotateWelcome() {
     setInterval(() => {
         welcomeElement.textContent = welcomeMessages[currentIndex];
         currentIndex = (currentIndex + 1) % welcomeMessages.length;
-    }, 1000);
+    }, 1000); // Change every 1000 milliseconds (1 second)
 }
 
-// Function to adjust font size for specific elements
-function adjustFontSize(elementId, change) {
-    const element = document.getElementById(elementId);
-    if (element) {
-        const style = window.getComputedStyle(element, null).getPropertyValue('font-size');
-        const currentSize = parseFloat(style);
-        element.style.fontSize = `${currentSize + change}px`;
-    }
-}
+function enableSmoothScroll() {
+    // Apply smooth scroll behavior to all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-// Event listeners for the accessibility options
-function setupAccessibilityOptions() {
-    const trigger = document.getElementById('accessibility-trigger');
-    const options = document.getElementById('options');
-
-    trigger.addEventListener('click', function() {
-        const isHidden = options.getAttribute('aria-hidden') === 'true';
-        options.setAttribute('aria-hidden', String(!isHidden));
-        options.style.display = isHidden ? 'block' : 'none';
-    });
-
-    document.getElementById('increase-font-size').addEventListener('click', function() {
-        adjustFontSize('home-page', 1);
-        adjustFontSize('about', 1);
-    });
-
-    document.getElementById('decrease-font-size').addEventListener('click', function() {
-        adjustFontSize('home-page', -1);
-        adjustFontSize('about', -1);
-    });
-
-    document.getElementById('toggle-color-theme').addEventListener('click', function() {
-        document.body.classList.toggle('dark-theme');
-    });
-
-    document.getElementById('reset-accessibility').addEventListener('click', function() {
-        document.body.style.fontSize = '';
-        document.body.classList.remove('dark-theme');
+            let targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
 }
 
-// Initialize all functions after the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+// Call rotateWelcome and enableSmoothScroll once the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
     rotateWelcome();
-    setupAccessibilityOptions();
-    setupSmoothScrolling();
+    enableSmoothScroll();
 });
