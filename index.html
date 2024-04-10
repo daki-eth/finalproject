@@ -13,13 +13,13 @@
 
 <body>
     <nav class="site-nav">
-        <a href="#home" class="header-btn" title="Home">Home</a>
+        <a href="#home-page" class="header-btn" title="Home">Home</a>
         <a href="#about" class="header-btn" title="About Damian Lucic">About Me</a>
-        <a href="#partnerships" class="header-btn" title="Damian Lucic Portfolio">Portfolio</a>            
+        <a href="#portfolio" class="header-btn" title="Damian Lucic Portfolio">Portfolio</a>
         <a href="#contact" class="header-btn contact-btn" title="Contact Damian Lucic">Contact Now!</a>
     </nav>
 
-    <div class="main-content">
+    <div class="main-content" id="home-page">
         <div class="Home-Page">
             <h1 id="welcomeMessage">Welcome!</h1>
             <p class="title">
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <section class="about-me">
+    <section class="about-me" id="about">
         <h2 class="section-title">About Me</h2> 
         <div class="container">
             <div class="text">
@@ -47,7 +47,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2 class="section-title">Portfolio</h2>
         <div class="projects-container">
             <div class="project">
@@ -81,7 +81,7 @@
     </section>
     
     
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <h2 class="section-title">Contact Me</h2>
         <div class="contact-container">
             <div class="contact-methods">
@@ -114,24 +114,50 @@
             </div>
         </div>
     </section>
-    
-      
-    
-        
 
-
-        <div id="accessibility-options" aria-label="Accessibility Options">
-            <img src="accessability.png" alt="Accessibility Options" id="accessibility-trigger" role="button" aria-haspopup="true" aria-controls="options" style="cursor: pointer;">
-            <div id="options" class="hidden" aria-hidden="true" style="text-align: center;">
-                <button id="increase-font-size" aria-label="Increase text size" style="margin: 5px;">Increase text size</button>
-                <button id="decrease-font-size" aria-label="Decrease text size" style="margin: 5px;">Decrease text size</button>
-                <button id="toggle-color-theme" aria-label="Toggle color theme" style="margin: 5px;">Toggle color theme</button>
-                <button id="reset-accessibility" aria-label="Reset accessibility" style="margin: 5px;">Reset settings</button>
-            </div>
+    <div id="accessibility-options" aria-label="Accessibility Options">
+        <img src="accessability.png" alt="Accessibility Options" id="accessibility-trigger" role="button" aria-haspopup="true" aria-controls="options" style="cursor: pointer;">
+        <div id="options" class="hidden" aria-hidden="true" style="text-align: center;">
+            <button id="increase-font-size" aria-label="Increase text size" style="margin: 5px;">Increase text size</button>
+            <button id="decrease-font-size" aria-label="Decrease text size" style="margin: 5px;">Decrease text size</button>
+            <button id="toggle-color-theme" aria-label="Toggle color theme" style="margin: 5px;">Toggle color theme</button>
+            <button id="reset-accessibility" aria-label="Reset accessibility" style="margin: 5px;">Reset settings</button>
         </div>
+    </div>
 
-        
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const trigger = document.getElementById('accessibility-trigger');
+    const options = document.getElementById('options');
+
+    trigger.addEventListener('click', function() {
+        const isHidden = options.getAttribute('aria-hidden') === 'true';
+        options.setAttribute('aria-hidden', String(!isHidden));
+        options.style.display = isHidden ? 'block' : 'none';
+    });
+
+    document.getElementById('increase-font-size').addEventListener('click', function() {
+        document.body.style.fontSize = 'larger';
+    });
+
+    document.getElementById('decrease-font-size').addEventListener('click', function() {
+        document.body.style.fontSize = 'smaller';
+    });
+
+    document.getElementById('toggle-color-theme').addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+    });
+
+    document.getElementById('reset-accessibility').addEventListener('click', function() {
+        document.body.style.fontSize = '';
+        document.body.classList.remove('dark-theme');
+    });
     
+});
+
+    </script>
+    
+
     <footer>
         <div class="footer-title">
             <h3>Connect with Damian Lucic:</h3>
@@ -147,5 +173,7 @@
         </div>
     </footer>
     
+    <script src="main.js"></script>
+
 </body>
 </html>

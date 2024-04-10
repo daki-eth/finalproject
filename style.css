@@ -22,6 +22,7 @@ html, body {
     z-index: 1000;
 }
 
+
 .header-btn {
     color: #fff;
     text-decoration: none;
@@ -328,4 +329,38 @@ html, body {
     }
 }
 
+/*Accessability TOGGLE*/
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
 
+.dark-theme {
+    background-color: #333; 
+    color: #fff; 
+}
+
+.dark-theme .welcome-section {
+    background-color: #444; 
+}
+
+.dark-theme h1,
+.dark-theme p {
+    color: #ccc; 
+}
+
+#accessibility-options {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000; 
+}
+#accessibility-trigger {
+    cursor: pointer;
+    max-width: 50px; 
+}
+
+#options {
+    display: none; 
+    text-align: center;
+}
