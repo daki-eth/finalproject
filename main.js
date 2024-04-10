@@ -33,3 +33,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     document.querySelector('.feedback-message').textContent = 'Your message has been sent!';
   });
   
+
+  document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.querySelector('.form-feedback').innerHTML = 'Form Submitted';
+    document.querySelector('.form-feedback').style.display = 'block';
+});

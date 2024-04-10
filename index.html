@@ -83,50 +83,42 @@
     
     <section class="contact-section">
         <h2 class="section-title">Contact Me</h2>
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <div class="contact-method">
-                    <span class="icon email-icon"></span>
+        <div class="contact-container">
+            <div class="contact-methods">
+                <div class="contact-box">
+                    <img src="emailsymbol.png" alt="Email Icon" class="contact-icon">
                     <h3>Email</h3>
-                    <p>your-email@example.com</p>
-                    <a href="mailto:your-email@example.com" class="contact-button">Send a message</a>
+                    <p>damian.lucic@torontomu.ca</p>
+                    <a href="mailto:damian.lucic@torontomu.ca" class="message-button">Send a message</a>
                 </div>
-                <div class="contact-method">
-                    <span class="icon whatsapp-icon"></span>
+                <div class="contact-box">
+                    <img src="Whatsapp.png" alt="WhatsApp Icon" class="contact-icon">
                     <h3>WhatsApp</h3>
-                    <p>+1234567890</p>
-                    <a href="https://wa.me/1234567890" class="contact-button">Send a message</a>
+                    <p>+16473657919</p>
+                    <a href="https://wa.me/16473657919" class="message-button">Send a message</a>
                 </div>
-                <div class="contact-method">
-                    <span class="icon instagram-icon"></span>
+                <div class="contact-box">
+                    <img src="Instagram.png" alt="Instagram Icon" class="contact-icon">
                     <h3>Instagram</h3>
-                    <p>@yourusername</p>
-                    <a href="https://www.instagram.com/yourusername" class="contact-button">Send a message</a>
+                    <p>@Daki.eth</p>
+                    <a href="https://www.instagram.com/Daki.eth" class="message-button">Send a message</a>
                 </div>
             </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <div class="form-buttons">
-                    <button type="submit" class="submit-button">Send Message</button>
-                    <button type="button" class="clear-button" onclick="document.getElementById('contactForm').reset()">Clear</button>
-                </div>
-                <p class="feedback-message"></p>
-            </form>
+            <div class="contact-form">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+                <textarea placeholder="Your message here..."></textarea>
+                <button type="submit" class="send-button">Send Message</button>
+                <button type="reset" class="clear-button">Clear</button>
+                <div class="form-feedback"></div>
+            </div>
         </div>
     </section>
     
+      
     
+        
+
 
         <div id="accessibility-options" aria-label="Accessibility Options">
             <img src="accessability.png" alt="Accessibility Options" id="accessibility-trigger" role="button" aria-haspopup="true" aria-controls="options" style="cursor: pointer;">
