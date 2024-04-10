@@ -125,55 +125,35 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const trigger = document.getElementById('accessibility-trigger');
-    const options = document.getElementById('options');
-
-    trigger.addEventListener('click', function() {
-        const isHidden = options.getAttribute('aria-hidden') === 'true';
-        options.setAttribute('aria-hidden', String(!isHidden));
-        options.style.display = isHidden ? 'block' : 'none';
-    });
-
-    document.getElementById('increase-font-size').addEventListener('click', function() {
-        document.body.style.fontSize = 'larger';
-    });
-
-    document.getElementById('decrease-font-size').addEventListener('click', function() {
-        document.body.style.fontSize = 'smaller';
-    });
-
-    document.getElementById('toggle-color-theme').addEventListener('click', function() {
-        document.body.classList.toggle('dark-theme');
-    });
-
-    document.getElementById('reset-accessibility').addEventListener('click', function() {
-        document.body.style.fontSize = '';
-        document.body.classList.remove('dark-theme');
-    });
     
-});
-
-    </script>
-    
-
-    <footer>
-        <div class="footer-title">
-            <h3>Connect with Damian Lucic:</h3>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>Connect with Damian Lucic</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/damian-lucic/" title="LinkedIn" target="_blank">
+                    <img src="Linkedin.jpg" alt="LinkedIn">
+                </a>
+                <a href="mailto:damian.lucic@torontomu.ca" title="Email">
+                    <img src="emailsymbol.png" alt="Email">
+                </a>
+                <a href="https://www.instagram.com/Daki.eth" title="Instagram">
+                    <img src="Instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/DakiCrypto" title="Twitter">
+                    <img src="twitter.png" alt="Twitter">
+                </a>
+                <a href="https://wa.me/16473657919">
+                    <img src="Whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
         </div>
-        <div class="contact-container">
-            <div class="contact-item">
-                <a href="https://www.linkedin.com/in/damian-lucic/" class="contact-link contact-icon linkedin" title="Damian Lucic on LinkedIn"></a>
-            </div>
-            <div class="contact-item">
-                <a href="mailto:damian.lucic@torontmu.ca" class="contact-link contact-icon email" title="Email Damian Lucic"></a>
-            </div>
-            <!-- Add other contact links with appropriate classes -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Damian Lucic. All rights reserved.</p>
         </div>
     </footer>
     
     <script src="main.js"></script>
-
+    <script src="main.js" defer></script>
+    
 </body>
 </html>

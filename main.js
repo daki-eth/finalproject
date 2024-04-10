@@ -1,21 +1,7 @@
-
-/*Nav Bar Button Functions*/
-document.addEventListener("DOMContentLoaded", () => {
-    // This function handles the smooth scroll to sections
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-});
-/* Welcome function */
+// Welcome messages in different languages
 const welcomeMessages = ["Welcome!", "Bienvenue!", "Добро пожаловать!", "Willkommen!", "¡Bienvenido!", "你好"];
 
+// Function to rotate the welcome message
 function rotateWelcome() {
     const welcomeElement = document.getElementById("welcomeMessage");
     let currentIndex = 0;
@@ -26,112 +12,103 @@ function rotateWelcome() {
     }, 1000); 
 }
 
-window.onload = rotateWelcome;
-
- 
-/* Contact Form */
-document.getElementById('contactForm').addEventListener('submit', function(event){
-    event.preventDefault();
-    
-    document.querySelector('.contact-section').classList.add('message-sent');
-    document.querySelector('.feedback-message').textContent = 'Your message has been sent!';
-  });
-  
-
-  document.querySelector('.contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    document.querySelector('.form-feedback').innerHTML = 'Form Submitted';
-    document.querySelector('.form-feedback').style.display = 'block';
-});
+// Call the rotateWelcome function when the document is fully loaded
+document.addEventListener('DOMContentLoaded', rotateWelcome);
 
 
-/* Accessibility function */
-document.addEventListener('DOMContentLoaded', function () {
-    var navLinks = document.querySelectorAll('.navbar a');
 
-    document.getElementById('scroll-to-about').addEventListener('click', function () {
-        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    // Accessibility menu toggle
+    const trigger = document.getElementById('accessibility-trigger');
+    const options = document.getElementById('options');
 
-    function removeActiveClasses() {
-        navLinks.forEach(function (link) {
-            link.classList.remove('active');
-        });
-    }
-
-    navLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-            removeActiveClasses();
-            this.classList.add('active');
-        });
-    });
-
-    document.querySelectorAll('section').forEach(function (section) {
-        section.addEventListener('mouseenter', function () {
-            removeActiveClasses();
-            var activeLink = document.querySelector(`.navbar a[href="#${this.id}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
+    if (trigger && options) {
+        trigger.addEventListener('click', function() {
+            const isHidden = options.getAttribute('aria-hidden') === 'true';
+            options.setAttribute('aria-hidden', String(!isHidden));
+            if (isHidden) {
+                options.classList.remove('hidden');
+                options.style.display = 'block';
+            } else {
+                options.classList.add('hidden');
+                options.style.display = 'none';
             }
         });
-        section.addEventListener('mouseleave', function () {
-            removeActiveClasses();
-        });
-    });
-
-    var contactform = document.querySelector('form');
-    contactform.addEventListener('submit', function (event) {
-        alert("Information submitted");
-    });
-
-    document.querySelectorAll('.skill-tag').forEach(function (tag) {
-        tag.addEventListener('click', function (e) {
-            document.querySelectorAll('.skill-tag.active').forEach(function (activeTag) {
-                if (activeTag !== tag) {
-                    activeTag.classList.remove('active');
-                }
-            });
-            tag.classList.toggle('active');
-            e.stopPropagation(); 
-        });
-    });
-
-    document.addEventListener('click', function () {
-        document.querySelectorAll('.skill-tag.active').forEach(function (tag) {
-            tag.classList.remove('active');
-        });
-    });
-
-    document.querySelectorAll('.skill-tag').forEach(function (tag) {
-        tag.addEventListener('click', function (e) {
-            e.stopPropagation();
-        });
-    });
-
-    document.getElementById('accessibility-trigger').addEventListener('click', function() {
-        var options = document.getElementById('options');
-        options.classList.toggle('hidden');
-        options.setAttribute('aria-hidden', options.classList.contains('hidden'));
-    });
-
-    function increaseFontSize() {
-        var style = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
-        var currentSize = parseFloat(style);
-        document.body.style.fontSize = (currentSize + 1) + 'px';
     }
+
+    // Increase font size
+    const increaseBtn = document.getElementById('increase-font-size');
+    if (increaseBtn) {
+        increaseBtn.addEventListener('click', function() {
+            document.body.style.fontSize = 'larger';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const welcomeSection = document.getElementById('home-page');
+        const aboutSection = document.getElementById('about');
     
-    function decreaseFontSize() {
-        var style = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
-        var currentSize = parseFloat(style);
-        document.body.style.fontSize = (currentSize - 1) + 'px';
-    }
+        // Function to adjust font size for a specific element
+        function adjustFontSize(element, change) {
+            const style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+            const currentSize = parseFloat(style);
+            element.style.fontSize = `${currentSize + change}px`;
+        }
     
-    function toggleColorTheme() {
-        document.body.classList.toggle('high-contrast');
+        document.getElementById('increase-font-size').addEventListener('click', function() {
+            if (welcomeSection) {
+                adjustFontSize(welcomeSection, 1); 
+            }
+            if (aboutSection) {
+                adjustFontSize(aboutSection, 1); 
+            }
+        });
+    
+        document.getElementById('decrease-font-size').addEventListener('click', function() {
+            if (welcomeSection) {
+                adjustFontSize(welcomeSection, -1); 
+            }
+            if (aboutSection) {
+                adjustFontSize(aboutSection, -1); 
+            }
+        });
+    });
+    
+
+    // Decrease font size
+    const decreaseBtn = document.getElementById('decrease-font-size');
+    if (decreaseBtn) {
+        decreaseBtn.addEventListener('click', function() {
+            document.body.style.fontSize = 'smaller';
+        });
     }
 
-    document.getElementById('increase-font-size').addEventListener('click', increaseFontSize);
-    document.getElementById('decrease-font-size').addEventListener('click', decreaseFontSize);
-    document.getElementById('toggle-color-theme').addEventListener('click', toggleColorTheme);
+    // Toggle color theme
+    const toggleThemeBtn = document.getElementById('toggle-color-theme');
+    if (toggleThemeBtn) {
+        toggleThemeBtn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+        });
+    }
 
+    // Reset accessibility settings
+    const resetBtn = document.getElementById('reset-accessibility');
+    if (resetBtn) {
+        resetBtn.addEventListener('click', function() {
+            document.body.style.fontSize = '';
+            document.body.classList.remove('dark-theme');
+        });
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 });

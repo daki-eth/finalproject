@@ -364,3 +364,39 @@ html, body {
     display: none; 
     text-align: center;
 }
+
+
+/* Footer */
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 30px; /* Adjust based on your icon size */
+    height: auto;
+    vertical-align: middle;
+}
+
+.footer-bottom p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .social-links a {
+        margin: 0 5px;
+    }
+}
