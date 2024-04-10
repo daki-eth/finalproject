@@ -87,3 +87,62 @@ html, body {
     background-color: #009bff;
     transform: scale(1.05);
 }
+
+/* About Me */
+/* About Me */
+.about-me {
+    text-align: center;
+    padding: 4% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 3rem; 
+    margin-bottom: 1em; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.text {
+    flex: 1;
+    max-width: 50%;
+    font-size: 1.5rem;
+    margin-right: 20px; /* Spacing between text and image */
+}
+
+.profile-image {
+    flex: 1;
+    max-width: 500px; /* Adjusts the size of the image */
+    margin-left: 20px; /* Spacing between text and image */
+}
+
+.profile-image img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .text, .profile-image {
+        max-width: 100%;
+        margin: 0;
+    }
+    .profile-image img {
+        max-width: 80%; 
+        margin-top: 20px; 
+    }
+}
+
+
+
+  

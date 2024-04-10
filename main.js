@@ -10,7 +10,7 @@
 
 
 /* Welcome function */
-const welcomeMessages = ["Welcome!", "Bienvenue!", "Добро пожаловать!", "Willkommen!", "¡Bienvenido!"];
+const welcomeMessages = ["Welcome!", "Bienvenue!", "Добро пожаловать!", "Willkommen!", "¡Bienvenido!", "你好"];
 
 function rotateWelcome() {
     const welcomeElement = document.getElementById("welcomeMessage");
